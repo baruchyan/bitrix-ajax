@@ -1,0 +1,14 @@
+{
+  "name": "baruchyan/bitrix-ajax",
+  "description": "Bitrix base ajax class",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Baruchyan Georgy",
+      "email": "g.baruchyan@gmail.com"
+    }
+  ],
+  "autoload": {
+    "classmap": ["src"]
+  }
+}
