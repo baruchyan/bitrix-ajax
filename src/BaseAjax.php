@@ -42,7 +42,6 @@ class BaseAjax
     /** @var string */
     protected $siteId;
 
-
     /**
      * BaseAjax constructor.
      * @param string $action
@@ -80,13 +79,12 @@ class BaseAjax
         global $USER;
         $this->user = $USER;
         $this->userId = $USER->GetID();
-
     }
 
     /**
-     * @param $modules
+     * @param array $modules
      */
-    protected function includeModules($modules): void
+    protected function includeModules(array $modules): void
     {
         if(empty($modules))
             return;
@@ -170,7 +168,6 @@ class BaseAjax
         return empty($this->errors);
     }
 
-
     /**
      * Установка статуса true
      * @param string $message
@@ -194,7 +191,7 @@ class BaseAjax
     /**
      * Установка значения поля
      * @param string $field
-     * @param $value
+     * @param mixed $value
      */
     protected function setField(string $field, $value): void
     {
@@ -211,9 +208,9 @@ class BaseAjax
     }
 
     /**
-     * @return mixed
+     * @return array
      */
-    public function getResponse()
+    public function getResponse(): array
     {
         return $this->response;
     }
